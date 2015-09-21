@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="3.1" type="module" client="site" method="upgrade">
+	<name>ANSEVE Contact Form</name>
+	<creationDate>20 April 2015</creationDate>
+	<author>Andreas Vennemann</author>
+	<authorEmail>andreas.vennemann@anseve.de</authorEmail>
+	<authorUrl>http://anseve.de</authorUrl>
+	<copyright>(C) 2015 Andreas Vennemann</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>2.0.0</version>
+	<description>MOD_ANSEVE_CONTACT_DESCR</description>
+	
+	<files>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename module="mod_anseve_contactform">mod_anseve_contactform.php</filename>
+		<filename>mod_anseve_contactform.xml</filename>
+		<filename>helper.php</filename>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+				<field type="spacer" name="spaceremail" label="MOD_ANSEVE_CONTACT_EMAIL_PARA_SPACER"/>
+				<field name="senderemail" type="email" label="MOD_ANSEVE_CONTACT_EMAIL_SENDER_LABEL" description="MOD_ANSEVE_CONTACT_EMAIL_SENDER_DESCR" default="" />
+				<field name="sendername" type="text" label="MOD_ANSEVE_CONTACT_NAME_SENDER_LABEL" description="MOD_ANSEVE_CONTACT_NAME_SENDER_DESCR" default="" />
+				<field name="recipientemail" type="email" label="MOD_ANSEVE_CONTACT_EMAIL_REC_LABEL" description="MOD_ANSEVE_CONTACT_EMAIL_REC_DESCR" default="" />			
+				
+				<field name="successtext" type="text" label="MOD_ANSEVE_CONTACT_SUCCESS_LABEL" description="MOD_ANSEVE_CONTACT_SUCCESS_DESCR" default="Thank you for your message." />
+				<field name="errortext" type="text" label="MOD_ANSEVE_CONTACT_ERROR_SEND_LABEL" description="MOD_ANSEVE_CONTACT_ERROR_SEND_DESCR" default="There has been an error. Please try again." />
+				<field name="errortextmail" type="text" label="MOD_ANSEVE_CONTACT_ERROR_MAIL_LABEL" description="MOD_ANSEVE_CONTACT_ERROR_MAIL_DESCR" default="Please enter a valid email address." />
+				<field name="errortextfields" type="text" label="MOD_ANSEVE_CONTACT_ERROR_FIELD_LABEL" description="MOD_ANSEVE_CONTACT_ERROR_FIELD_DESCR" default="Please fill in all required fields." />
+				<field type="spacer" name="spacer1" label="&lt;hr style=&quot;width:400px; margin: 0px 0; border:1px solid none;&quot;&gt;"/>
+				
+				<field type="spacer" name="spacerfeld" label="MOD_ANSEVE_CONTACT_FIELD_PARA_SPACER"/>
+				<field name="nametext" type="text" label="MOD_ANSEVE_CONTACT_NAME_FIELD_LABEL" description="MOD_ANSEVE_CONTACT_NAME_FIELD_DESCR" default="Your Name" />
+				<field name="namelabel" type="text" label="MOD_ANSEVE_CONTACT_NAME_LABEL_LABEL" description="MOD_ANSEVE_CONTACT_NAME_LABEL_DESCR" default="Name" />
+				<field name="showlabelname" type="list" default="0" label="MOD_ANSEVE_CONTACT_SHOW_LABEL_LABEL" description="MOD_ANSEVE_CONTACT_SHOW_LABEL_DESCR" multiple="false">
+ 					 <option value="0">JHIDE</option>
+ 					 <option value="1">JSHOW</option>
+				</field>
+				
+				<field type="spacer" name="spacer2" label="&lt;hr style=&quot;width:400px; margin: 0px 0; border:1px solid none;&quot;&gt;"/>
+				<field name="emailtext" type="text" label="MOD_ANSEVE_CONTACT_EMAIL_FIELD_LABEL" description="MOD_ANSEVE_CONTACT_EMAIL_FIELD_DESCR" default="E-Mail" />
+				<field name="emaillabel" type="text" label="MOD_ANSEVE_CONTACT_EMAIL_LABEL_LABEL" description="MOD_ANSEVE_CONTACT_EMAIL_LABEL_DESCR" default="E-Mail" />
+				<field name="showlabelemail" type="list" default="0" label="MOD_ANSEVE_CONTACT_SHOW_LABEL_LABEL" description="MOD_ANSEVE_CONTACT_SHOW_LABEL_DESCR" multiple="false">
+ 					 <option value="0">JHIDE</option>
+ 					 <option value="1">JSHOW</option>
+				</field>
+				
+				<field type="spacer" name="spacer3" label="&lt;hr style=&quot;width:400px; margin: 0px 0; border:1px solid none;&quot;&gt;"/>
+				<field name="subjecttext" type="text" label="MOD_ANSEVE_CONTACT_SUBJECT_FIELD_LABEL" description="MOD_ANSEVE_CONTACT_SUBJECT_FIELD_DESCR" default="Subject" />
+				<field name="subjectlabel" type="text" label="MOD_ANSEVE_CONTACT_SUBJECT_LABEL_LABEL" description="MOD_ANSEVE_CONTACT_SUBJECT_LABEL_DESCR" default="Subject" />
+				<field name="showlabelsubject" type="list" default="0" label="MOD_ANSEVE_CONTACT_SHOW_LABEL_LABEL" description="MOD_ANSEVE_CONTACT_SHOW_LABEL_DESCR" multiple="false">
+ 					 <option value="0">JHIDE</option>
+ 					 <option value="1">JSHOW</option>
+				</field>
+				
+				<field type="spacer" name="spacer4" label="&lt;hr style=&quot;width:400px; margin: 0px 0; border:1px solid none;&quot;&gt;"/>
+				<field name="messagetext" type="text" label="MOD_ANSEVE_CONTACT_MESSAGE_FIELD_LABEL" description="MOD_ANSEVE_CONTACT_MESSAGE_FIELD_DESCR" default="Your Message" />
+				<field name="messagelabel" type="text" label="MOD_ANSEVE_CONTACT_MESSAGE_LABEL_LABEL" description="MOD_ANSEVE_CONTACT_MESSAGE_LABEL_DESCR" default="Message" />
+				<field name="showlabelmessage" type="list" default="0" label="MOD_ANSEVE_CONTACT_SHOW_LABEL_LABEL" description="MOD_ANSEVE_CONTACT_SHOW_LABEL_DESCR" multiple="false">
+ 					 <option value="0">JHIDE</option>
+ 					 <option value="1">JSHOW</option>
+				</field>
+				
+				<field type="spacer" name="spacer5" label="&lt;hr style=&quot;width:400px; margin: 0px 0; border:1px solid none;&quot;&gt;"/>
+				<field name="email_copy_label" type="text" label="MOD_ANSEVE_CONTACT_EMAIL_COPY_LABEL_LABEL" description="MOD_ANSEVE_CONTACT_EMAIL_COPY_LABEL_DESCR" default="Obtain a copy of this email" />
+				<field name="email_copy" type="list" default="0" label="MOD_ANSEVE_CONTACT_EMAIL_COPY_LABEL" description="MOD_ANSEVE_CONTACT_EMAIL_COPY_DESCR" multiple="false">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				
+				<field type="spacer" name="spacer6" label="&lt;hr style=&quot;width:400px; margin: 0px 0; border:1px solid none;&quot;&gt;"/>
+				<field name="buttontext" type="text" label="MOD_ANSEVE_CONTACT_BUTTON_LABEL" description="MOD_ANSEVE_CONTACT_BUTTON_DESCR" default="Send" />
+				
+				<field type="spacer" name="spacer7" label="&lt;hr style=&quot;width:400px; margin: 0px 0; border:1px solid none;&quot;&gt;"/>
+				<field name="pretext" type="editor" label="MOD_ANSEVE_CONTACT_PRE_LABEL" description="MOD_ANSEVE_CONTACT_PRE_DESCR" filter="safehtml"/>
+				<field name="posttext" type="editor" label="MOD_ANSEVE_CONTACT_POST_LABEL" description="MOD_ANSEVE_CONTACT_POST_DESCR" filter="safehtml"/>
+			</fieldset>
+			
+			<fieldset name="layout" label="MOD_ANSEVE_CONTACT_TAB_LAYOUT_LABEL">
+				<field name="layout" type="list" default="form" label="MOD_ANSEVE_CONTACT_LAYOUT_LABEL" description="MOD_ANSEVE_CONTACT_LAYOUT_DESCR" multiple="false">
+					<option value="form">MOD_ANSEVE_CONTACT_DEFAULT</option>
+					<option value="divform">MOD_ANSEVE_CONTACT_DEFAULT_DIV</option>
+					<option value="bootstrap2">MOD_ANSEVE_CONTACT_BOOTSTRAP2</option>
+					<option value="bootstrap3">MOD_ANSEVE_CONTACT_BOOTSTRAP3</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field type="spacer" name="spaceradvanced" label="MOD_ANSEVE_CONTACT_ADVAN_PARA_SPACER"/>				
+				<field name="honeypottext" type="text" label="MOD_ANSEVE_CONTACT_HONEYPOT_FIELD_LABEL" description="MOD_ANSEVE_CONTACT_HONEYPOT_FIELD_DESCR" default="Please leave empty" />
+				<field name="captcha" type="list" default="0" label="MOD_ANSEVE_CONTACT_CAPTCHA_LABEL" description="MOD_ANSEVE_CONTACT_CAPTCHA_DESCR" multiple="false">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+				<field name="captcha_error" type="text" label="MOD_ANSEVE_CONTACT_CAPTCHA_ERROR_LABEL" description="MOD_ANSEVE_CONTACT_CAPTCHA_ERROR_DESCR" default="Captcha is not correct" />
+				<field name="captchalabel" type="text" label="MOD_ANSEVE_CONTACT_CAPTCHA_LABEL_LABEL" description="MOD_ANSEVE_CONTACT_CAPTCHA_LABEL_DESCR" default="Captcha" />
+				<field name="showlabelcaptcha" type="list" default="0" label="MOD_ANSEVE_CONTACT_SHOW_LABEL_LABEL" description="MOD_ANSEVE_CONTACT_SHOW_LABEL_DESCR" multiple="false">
+ 					 <option value="0">JHIDE</option>
+ 					 <option value="1">JSHOW</option>
+				</field>
+				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field type="spacer" name="spacer8" label="&lt;hr style=&quot;width:400px; margin: 0px 0; border:1px solid none;&quot;&gt;"/>
+			</fieldset>
+		</fields>
+	</config>
+	
+	<languages>
+		<language tag="de-DE">language/de-DE/de-DE.mod_anseve_contactform.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.mod_anseve_contactform.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_anseve_contactform.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_anseve_contactform.sys.ini</language>
+	</languages>	
+</extension>
