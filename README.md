@@ -31,6 +31,8 @@ Copyright:
 
 Changelog:
 ---------------------
+= 2.0.1 =
+* Fixed: Fix for attribute for captcha label
 = 2.0.0 =
 * Release ANSEVE Contact Form 2.0.0
 
