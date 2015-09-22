@@ -8,6 +8,8 @@ Description
 * Change error message, success message, label text, placeholders in the backend
 * The user can obtain a copy of the email
 * It has a default, Bootstrap 2 or Bootstrap 3 Layout
+* Template override possible
+* User input validation with HTML5 and PHP
 
 Installation:
 ---------------------
