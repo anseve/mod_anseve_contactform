@@ -1,4 +1,4 @@
-[![ANSEVE](http://anseve.de) Responsive Contact Form module for Joomla 3.X 
+[ANSEVE](http://anseve.de) Responsive Contact Form module for Joomla 3.X 
 
 Description
 ---------------------
