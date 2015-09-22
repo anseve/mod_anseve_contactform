@@ -52,7 +52,7 @@ defined ('_JEXEC') or die;
           <?php if ( $params->get("captcha") == 1 ) : ?> 
           <div class="control-group"> 
             <?php if ( $params->get("showlabelcaptcha") == 1 ) : ?>
-              <label class="control-label" for="message_<?php echo $module->id; ?>"><?php echo $params->get("captchalabel"); ?></label>
+              <label class="control-label" for="captcha_<?php echo $module->id; ?>"><?php echo $params->get("captchalabel"); ?></label>
             <?php endif; ?>
               <div class="controls" id="anseve_form_recaptcha">
               </div>

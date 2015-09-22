@@ -36,7 +36,7 @@ defined ('_JEXEC') or die;
                     
             <?php if ( $params->get("captcha") == 1 ) : ?>              
 			  <?php if ( $params->get("showlabelcaptcha") == 1 ) : ?>
-                <label class="anseve_label" for="message_<?php echo $module->id; ?>"><?php echo $params->get("captchalabel"); ?></label>
+                <label class="anseve_label" for="captcha_<?php echo $module->id; ?>"><?php echo $params->get("captchalabel"); ?></label>
               <?php endif; ?>
                 <div id="anseve_form_recaptcha">
                 </div>
