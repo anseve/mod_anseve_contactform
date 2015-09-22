@@ -14,14 +14,15 @@ Description
 Installation:
 ---------------------
 * Download Zip
-* Joomla Backend Extensions -> Manage
+* Joomla Backend under Extensions -> Manage
 * Upload Zip
 * Click the Upload & Install button
 * Configure the ANSEVE Contact Form module (Joomla Backend under Extensions -> Modules)
 
 Demo:
 ---------------------
-* Coming Soon
+* [Demo 1](http://anseve.de/joomla/index.php/demo-1.html) with ReCaptcha 
+* [Demo 2](http://anseve.de/joomla/index.php/demo-2.html)
 
 Copyright:
 ---------------------
