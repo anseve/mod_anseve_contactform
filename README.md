@@ -6,6 +6,7 @@ Description
 * Optional: Use Joomlas ReCaptcha Plugin
 * Translatable (English, German translation included)
 * Change error message, success message, label text, placeholders in the backend
+* Show/Hide label
 * The user can obtain a copy of the email
 * It has a default, Bootstrap 2 or Bootstrap 3 Layout
 * Template override possible
