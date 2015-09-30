@@ -15,10 +15,10 @@ Description
 Installation:
 ---------------------
 * Download Zip
-* Joomla Backend under Extensions -> Manage
+* In your Joomla Backend go to Extensions -> Manage
 * Upload Zip
 * Click the Upload & Install button
-* Configure the ANSEVE Contact Form module (Joomla Backend under Extensions -> Modules)
+* Configure the ANSEVE Contact Form module (In your Joomla Backend under Extensions -> Modules)
 
 Demo:
 ---------------------
