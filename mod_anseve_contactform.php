@@ -7,23 +7,20 @@
 
 defined ('_JEXEC') or die;
 
-	$input = JFactory::getApplication()->input;
-	$check = $input->getInt( "check", null );
+$input = JFactory::getApplication()->input;
+$check = $input->getInt('check', null);
+
+if ($check == null) // Form not sent
+{	
+	// Default layout
+	require JModuleHelper::getLayoutPath('mod_anseve_contactform');
+} 
+else if ($check === 1) // Form sent
+{
+	// Check Token
+	JSession::checkToken() or die('Invalid Token');
 	
-	//form not send
-	if ( $check == null ) {	
-		//default layout	
-		require JModuleHelper::getLayoutPath( "mod_anseve_contactform" );
-	//form send 
-	} elseif ( $check === 1 ) {
-		//Check Token
-		JSession::checkToken() or die( 'Invalid Token' );
-		
-		require_once __DIR__ . "/helper.php";  
-		$status = modIcContactFormHelper::sendMail( $params );		
-		require JModuleHelper::getLayoutPath( "mod_anseve_contactform" );
-	}
-		
-
-?>
-
+	require_once __DIR__ . '/helper.php';
+	$status = modIcContactFormHelper::sendMail($params);
+	require JModuleHelper::getLayoutPath('mod_anseve_contactform');
+}
